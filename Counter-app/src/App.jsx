@@ -7,11 +7,14 @@ function App() {
   const addValue = () => {
     // console.log("first",Math.random())
     if (counter < 20) {
-      counter = counter + 1;
+      // counter = counter + 1;
     } else {
       alert("The current value can not exceed more than 20");
     }
-    setCounter(counter);
+    setCounter(prevCounter => prevCounter+1);
+    setCounter(prevCounter => prevCounter+1);
+    setCounter(prevCounter => prevCounter+1);
+    setCounter(prevCounter => prevCounter+1);
   };
   const decrValue = () => {
     if (counter > 0) {
@@ -23,7 +26,7 @@ function App() {
   };
   return (
     <>
-      <h1>Hello it's chai here</h1>
+      <h1>Hello its chai here</h1>
       <h1>Counter Value : {counter}</h1>
 
       <button onClick={addValue}>Increase++</button>
